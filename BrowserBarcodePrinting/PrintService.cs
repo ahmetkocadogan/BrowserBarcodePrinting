@@ -41,11 +41,12 @@ namespace BrowserBarcodePrinting
 
         protected override void OnStart(string[] args)
         {
-            this.webServer = WebApp.Start<Startup>(url: baseAddress);
+            this.webServer = WebApp.Start<Startup>(url: $"{baseAddress}/{_conf.endpoint_port}/");
         }
 
         protected override void OnStop()
         {
+            this.webServer.Dispose();
         }
     }
 }
