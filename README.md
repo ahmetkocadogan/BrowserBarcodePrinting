@@ -1,5 +1,5 @@
 # BrowserBarcodePrinting
-Barcode Printer Helper Windows Service From Browser, created specifically for barcode printers
+Barcode Printer Helper Windows Service From Browser, created specifically for zebra barcode printers
 
 This is a Windows Service application which hosts a web api. 
 
