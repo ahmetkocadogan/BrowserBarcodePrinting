@@ -32,16 +32,15 @@ namespace BrowserBarcodePrinting
             else
             {
                 PrinterSettings settings = new PrinterSettings();
-                _conf = new ModelConfiguration() { endpoint_port = 9876 };
+                _conf = new ModelConfiguration() { endpoint_port = 9876, base_address="http://localhost" };
             }
         }
 
         IDisposable webServer;
-        string baseAddress = "http://localhost:";
 
         protected override void OnStart(string[] args)
         {
-            this.webServer = WebApp.Start<Startup>(url: $"{baseAddress}/{_conf.endpoint_port}/");
+            this.webServer = WebApp.Start<Startup>(url: $"{_conf.base_address}/{_conf.endpoint_port}/");
         }
 
         protected override void OnStop()

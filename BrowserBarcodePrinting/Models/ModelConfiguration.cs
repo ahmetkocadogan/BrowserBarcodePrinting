@@ -8,5 +8,6 @@ namespace BrowserBarcodePrinting.Models
     public class ModelConfiguration
     {
         public int endpoint_port { get; set; }
+        public string base_address { get; set; }
     }
 }

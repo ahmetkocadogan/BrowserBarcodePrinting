@@ -1,3 +1,4 @@
 {
-  "endpoint_port": 9876
+  "endpoint_port": 9876,
+  "base_address" :  "http://localhost"
 }
